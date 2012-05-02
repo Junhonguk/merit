@@ -1,0 +1,126 @@
+#ifndef	SUPPLY_H
+#define SUPPLY_H
+#include <QtCore>
+#include <QtGui>
+#include <QApplication>
+#include <QWidget>
+#include <QStandardItemModel>
+#include <QItemSelectionModel>
+#include <QVector>
+
+//#include "ui_demand.h"
+#include "merittab.h"
+#include "supplyprofile.h"
+//#include "supplyscenarioview.h"
+#include "supplyselection.h"
+#include "supplyprocess.h"
+//#include "supplyscenarioview.h"
+#include "supplyscenariotreemodel.h"
+#include "merit.h"
+#include "qwt_plot.h"
+
+//for the graph
+#include "plot_supply.h"
+//#include "plot_supply_two.h"
+
+class Supply : public QWidget//, public QAbstractItemView//, public Ui::Demand
+{
+    Q_OBJECT
+public:
+	Supply(QWidget *parent = 0);
+	~Supply();
+
+	void retrieveSupplyData(const QString& name);
+	void setSupplyData(int index, float supply);
+	float getSupplyData(int index);
+
+	void AllocateMemory(int n);
+
+
+
+    MeritTab *meritTab;
+//	DemandProfile *dp;
+//	DemandScenarioView *dsView;
+	SupplyProfile *ssView;
+	SupplyProcess *ssProcess;
+	SupplySelection *ssSelected;
+
+	QGridLayout *gridLayout;
+
+    QVBoxLayout *verticalLayout;
+	QPushButton *addButton;
+	QPushButton *delButton;
+
+//	QPushButton *newButton;
+    QSpacerItem *horizontalSpacer_1; 
+    QSpacerItem *horizontalSpacer_2; 
+	QSpacerItem *horizontalSpacer_3; 
+
+	QTreeView *tree;
+	QMdiArea *mdiArea;
+	QwtPlot *qwtPlot;
+	QSplitter* splitterHrt;
+	QSplitter* splitterVrt;
+	SupplyScenarioTreeModel* model;
+    QWidget *widget;
+
+	QHBoxLayout *horizontalLayout1; 
+	QHBoxLayout *horizontalLayout2; 
+	QVBoxLayout *verticalLayout1;
+
+	PlotSupply *supplyPlot;
+//	PlotDemandTwo *demandPlot2;
+
+	QVector<float> supplyDataVector;
+	QVector<float> supplyTotalVector;
+	QVector <QVector <float> > SupplySelectedVector;
+	QVector <QString> ItemNameVector;
+
+
+	QModelIndex m_ItemName;
+	QStringList m_SupplyScenarioData;		
+	QList<QPair<QString, QVector <float> > > selectedSupplyList;
+	QList<QPair<QString, QVector <float> > > processSupplyList;
+
+	QVector<float> supplyData;
+//	QStandardItem *item;
+//	QStandardItem *child;
+//private:
+//    Plot *d_plot;
+private slots:
+//	void addSubWin();
+ //   void demandModel_clicked(const QModelIndex &index);
+//	void addDemandModel(void);
+
+protected slots:
+//	void selectionChanged( const QItemSelection &selected, const QItemSelection &deselected );
+//    void dataChanged( const QModelIndex &topLeft, const QModelIndex &bottomRight );
+	void addSupplyScenario();
+	void drawSupplyGraph(QTableWidgetItem *item);
+	void drawSupplyGraph(QListWidgetItem *item);
+	void moveMiddle();
+	void moveRight();
+
+	void LocateItem(const QPoint &pos);
+	void supplyInfo(QTableWidgetItem* item);
+//	void drawRightSupplyGraph();//QListWidgetItem *items);
+
+//	void saveCurrentScenario();
+//	void saveCurrentScenarioAs();
+
+//	QModelIndex ItemName();
+//	void populateProfiles();
+
+//	QPair<QString, QVector<float> > demandProfileData;
+
+public:
+  //  void setCurrentTab();
+//	void addDemandScenario();
+//	void updateView();
+//	void selectionChanged();
+
+private:
+	int m_SupScnNo;
+};
+
+#endif

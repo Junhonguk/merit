@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MeritClass</class>
+ <widget class="QMainWindow" name="MeritClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>537</width>
+    <height>360</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Merit: demand/supply matching tool</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../../../Users/Jun Hong/.designer/backup/images/Merit.ico</normaloff>../../../../Users/Jun Hong/.designer/backup/images/Merit.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>537</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionNew_project"/>
+    <addaction name="actionOpen_existing_project"/>
+    <addaction name="actionSave_project"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuDatabases">
+    <property name="title">
+     <string>&amp;Databases</string>
+    </property>
+    <addaction name="actionClimate"/>
+    <addaction name="actionDemand"/>
+    <addaction name="actionSupply"/>
+    <addaction name="separator"/>
+    <addaction name="actionProject"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionMerit_help"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout_Merit"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menuDatabases"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionNew_project"/>
+   <addaction name="actionOpen_existing_project"/>
+   <addaction name="actionSave_project"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionMerit_help"/>
+  </widget>
+  <action name="actionNew_project">
+   <property name="icon">
+    <iconset>
+     <normaloff>Resources/newadd.png</normaloff>Resources/newadd.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;New project</string>
+   </property>
+  </action>
+  <action name="actionOpen_existing_project">
+   <property name="icon">
+    <iconset resource="merit.qrc">
+     <normaloff>:/Merit/Resources/open.png</normaloff>:/Merit/Resources/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Open existing project</string>
+   </property>
+  </action>
+  <action name="actionSave_project">
+   <property name="icon">
+    <iconset resource="merit.qrc">
+     <normaloff>:/Merit/Resources/save.png</normaloff>:/Merit/Resources/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save project</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>&amp;Exit</string>
+   </property>
+  </action>
+  <action name="actionClimate">
+   <property name="icon">
+    <iconset>
+     <normaloff>images/Climate.png</normaloff>images/Climate.png</iconset>
+   </property>
+   <property name="text">
+    <string>Climate</string>
+   </property>
+  </action>
+  <action name="actionDemand">
+   <property name="text">
+    <string>Demand</string>
+   </property>
+  </action>
+  <action name="actionSupply">
+   <property name="text">
+    <string>Supply</string>
+   </property>
+  </action>
+  <action name="actionProject">
+   <property name="text">
+    <string>Project</string>
+   </property>
+  </action>
+  <action name="actionMerit_help">
+   <property name="icon">
+    <iconset resource="merit.qrc">
+     <normaloff>:/Merit/Resources/help.png</normaloff>:/Merit/Resources/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>Merit &amp;help</string>
+   </property>
+  </action>
+  <action name="actionAbout_Merit">
+   <property name="text">
+    <string>&amp;About Merit</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="merit.qrc"/>
+ </resources>
+ <connections/>
+</ui>

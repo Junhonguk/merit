@@ -1,0 +1,41 @@
+#include <QtGui>
+#include <QStandardItemModel>
+#include "supplyprocess.h"
+
+
+class QStandardItemModel;
+class QTableView;
+
+using namespace std;
+
+SupplyProcess::SupplyProcess(QWidget *parent)
+    : QWidget(parent)
+{
+    setupUi(this);
+	processSupplyList.clear();
+	connect(listProcessSupplyWidget, SIGNAL(itemClicked(QListWidgetItem *)), this, SLOT(setListItemName(QListWidgetItem *)));
+}
+
+
+
+SupplyProcess::~SupplyProcess()
+{
+
+}
+
+
+void SupplyProcess::updateView()
+{
+
+}
+
+
+void SupplyProcess::AllocateMemory(int n)
+{
+
+}
+
+void SupplyProcess::setListItemName(QListWidgetItem *Item)
+{
+	m_ItemName = Item->text();
+}

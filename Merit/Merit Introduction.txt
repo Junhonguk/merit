@@ -1,0 +1,1 @@
+Merit is a decision-making tool for assessing the match between demand and supply in energy system. It analyses the match on an hourly basis in both magnitude and temporal way. Merit is suitable for planning energy system for any location at various scales, from individual building to a region. Energy System Research Unit.
